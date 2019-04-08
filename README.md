@@ -13,7 +13,10 @@ A copy of this repository
 GNU GCC Compiler or Visual C++ Compiler
 
 ```
-Give examples
+git clone https://github.com/ArthoPacini/Steganography
+cd Steganography/
+make
+
 ```
 
 ### Compiling
