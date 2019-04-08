@@ -158,6 +158,6 @@ void encodeFileIntoImage(fs::path & inputImagePath, fs::path & inputFilePath, fs
     //Writes the rest of the file
     writeBinary(outputPath, bytesOfDataWithoutHeader);
     return;
-}/*
+}*/
 
 #endif
