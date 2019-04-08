@@ -88,4 +88,76 @@ void encodeImage(fs::path & inputPath, fs::path & outputPath, std::string encode
     return;
 }
 
+
+//THIS IS JUST A TEST, DO NOT USE IT
+//This is for encoding files into .ppm images
+/*
+void encodeFileIntoImage(fs::path & inputImagePath, fs::path & inputFilePath, fs::path & outputImagePath)
+{
+    //If file does not exists, just return; (i need to change these from void to bool, so that we can know if it was successful of fail
+    if(!fs::exists(inputFilePath))
+        return;
+    
+    //Create a buffer and read input image to buffer
+    std::vector<std::bitset<sizeof(unsigned char)*8>> bytesOfDataImage;
+    bytesOfDataImage = readBinaryToBitSet(inputPath);
+    
+    //Creates and reserve 15 bytes to store the header of the input image
+    std::vector<std::bitset<sizeof(unsigned char)*8>> headerData;
+    headerData.reserve(HEADER_SIZE_IN_BYTES);
+    
+    //Reads the first 15 bytes of the header into the 'headerData' buffer
+    for(unsigned i = 0; i < HEADER_SIZE_IN_BYTES; i++)
+    {
+        headerData.emplace_back(bytesOfData[i]);
+    }
+    
+    //Create a buffer and read input file to this buffer
+    std::vector<std::bitset<sizeof(unsigned char)*8>> bytesOfDataFile;
+    bytesOfDataFile = readBinaryToBitSet(inputPath);
+    
+    //This iterates over every byte in the 'bytesOfDataImage' buffer. For every 4 bytes, we can encode 1 byte of the input file.
+    unsigned iterationFile = 0;
+    unsigned shiftOfByte = 0;
+    for(auto & b : bytesOfData)
+    {
+        //Stores the byte of the encode message into a bitset
+        std::bitset<sizeof(unsigned char)*8> c(bytesOfDataFile[iterationFile]);
+
+        //Sets the first bit of the iterate bytesOfDataImage to match the (first bit + shiftOfByte) bit of the input file character
+        if(c.test(shiftOfByte))
+            b.set(0);
+        else
+            b.reset(0);
+
+        //Sets the second bit of the iterate bytesOfDataImage to match the (second bit + shiftOfByte) bit of the input file character
+        if(c.test(shiftOfByte+1))
+            b.set(1);
+        else
+            b.reset(1);
+
+        shiftOfByte+=2;
+        if(shiftOfByte == 8)
+        {
+            shiftOfByte = 0;
+            iterationFile = (iterationFile + 1)%bytesOfDataFile.size();
+        }
+    }
+    
+    //Writes the header data...
+    writeBinary(outputPath, headerData);
+
+    //Writes the encoded message, but first it need to get rid of the first 15 bytes, because they are the header data
+    //So creates a new vector, now without the 15 bytes headerData
+    std::vector<std::bitset<sizeof(unsigned char)*8>> bytesOfDataWithoutHeader;
+    //Reserve the size of bytesOfData - 15 bytes of header data
+    bytesOfDataWithoutHeader.reserve(bytesOfDataImage.size()-headerData.size());
+    //Copy the files ***THIS NEEDS TO BE CHANGE, probrably really bad approach***
+    std::copy(bytesOfDataImage.begin()+HEADER_SIZE_IN_BYTES, bytesOfDataImage.end(), back_inserter(bytesOfDataWithoutHeader));
+
+    //Writes the rest of the file
+    writeBinary(outputPath, bytesOfDataWithoutHeader);
+    return;
+}/*
+
 #endif
