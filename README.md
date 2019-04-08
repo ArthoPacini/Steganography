@@ -44,7 +44,7 @@ Just pull a request, that's it.
 
 ## Authors
 
-* **Artho Pacini** - *First implementation* - [PurpleBooth](https://twitter.com/arthopacini)
+* **Artho Pacini** - *First implementation* - [Twitter](https://twitter.com/arthopacini)
 
 ## License
 
