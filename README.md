@@ -13,28 +13,29 @@ A copy of this repository
 GNU GCC Compiler or Visual C++ Compiler
 
 ```
-git clone https://github.com/ArthoPacini/Steganography
-cd Steganography/
-make
 
 ```
 
-### Compiling
+### Cloning, compiling and running
 
 Instructions to compile
 
 If you are on Windows Microsoft Visual C++ Compiler
 
 ```
-cl.exe /EHsc main.cpp
-main
+git clone https://github.com/ArthoPacini/Steganography
+cd Steganography/
+path/to/cl.exe /EHsc main.cpp
+./main
 ```
 
 On GNU GCC Compiler
 
 ```
-g++ main.cpp -o main -std=c++17 -lstdc++fs
-main
+git clone https://github.com/ArthoPacini/Steganography
+cd Steganography/
+make
+./main
 ```
 
 ## Running
