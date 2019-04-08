@@ -2,6 +2,8 @@
 #include <filesystem>
 #include <string>
 
+#include "binaryio.h" //This is the binary input / output library, for writing and reading binary files with ease, also encoding
+
 int main()
 {
     //Sets the path for input file
