@@ -1,6 +1,7 @@
 # Steganography with C++ and .PPM files
 
-Steganography is a set of techniques for hiding secret data within ordinary data. This software hides messages into .ppm images files
+Steganography is a set of techniques for hiding secret data within ordinary data. This software hides messages into .ppm images files.
+It's written in Standard C++, no dependencies.
 
 ## Getting Started
 
