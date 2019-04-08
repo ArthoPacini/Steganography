@@ -9,12 +9,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-A copy of this repository
-GNU GCC Compiler or Visual C++ Compiler
-
-```
-
-```
+GNU GCC Compiler OR Microsoft Visual C++ Compiler
 
 ### Cloning, compiling and running
 
