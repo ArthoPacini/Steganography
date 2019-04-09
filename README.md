@@ -49,9 +49,11 @@ it contains "This is a hidden message inside the file! " inside it.
 ## Goals
 
 - [X] Hide a message inside a .ppm image file
-- [ ] Add symmetric-key cryptography
-- [ ] Add asymmetric-key cryptography
-- [ ] Hide a file inside a .ppm image file
+- [X] Decode a message inside a .ppm image file
+- [ ] Add symmetric-key cryptography to encoding and decoding of the .ppm image file
+- [ ] Add asymmetric-key cryptography to encoding and decoding of the .ppm image file
+- [ ] Hide (encode) a file inside a .ppm image file
+- [ ] Extract (decode) a file inside a .ppm image file
 - [ ] Add support for reading .jpeg, .png and .gif files
 - [ ] Add support for writing .jpeg, .png and .gif files
 - [ ] Make an electron app and add this code as an node.js addon
