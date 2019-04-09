@@ -37,6 +37,15 @@ make
 
 Right now the input and output paths to images are hard coded on main.cpp, line 12 and 17. This will be changed.
 
+## Example
+
+This is a sample image, found on "samples" folder.
+![beach original image](https://raw.githubusercontent.com/arthopacini/Steganography/master/samples/beach.ppm)
+
+This is the output image, found on "output_images" folder.
+![beach output image](https://raw.githubusercontent.com/arthopacini/Steganography/master/output_images/beach_output.ppm)
+it contains "This is a hidden message inside the file! " inside it.
+
 ## Contributing
 
 Just pull a request, that's it.
