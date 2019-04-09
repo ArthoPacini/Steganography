@@ -40,10 +40,10 @@ Right now the input and output paths to images are hard coded on main.cpp, line 
 ## Example
 
 This is a sample image, found on "samples" folder.
-![beach original image](https://raw.githubusercontent.com/arthopacini/Steganography/master/samples/beach.ppm)
+![beach original image](https://i.imgur.com/hXQY9jp.jpg)
 
 This is the output image, found on "output_images" folder.
-![beach output image](https://raw.githubusercontent.com/arthopacini/Steganography/master/output_images/beach_output.ppm)
+![beach output image](https://i.imgur.com/7J2NFiD.jpg)
 it contains "This is a hidden message inside the file! " inside it.
 
 ## Contributing
