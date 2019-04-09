@@ -46,6 +46,16 @@ This is the output image, found on "output_images" folder.
 ![beach output image](https://i.imgur.com/7J2NFiD.jpg)
 it contains "This is a hidden message inside the file! " inside it.
 
+## Goals
+
+- [X] Hide a message inside a .ppm image file
+- [ ] Add symmetric-key cryptography
+- [ ] Add asymmetric-key cryptography
+- [ ] Hide a file inside a .ppm image file
+- [ ] Add support for reading .jpeg, .png and .gif files
+- [ ] Add support for writing .jpeg, .png and .gif files
+- [ ] Make an electron app and add this code as an node.js addon
+
 ## Contributing
 
 Just pull a request, that's it.
